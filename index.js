@@ -28,17 +28,22 @@ export function eztree(dir, prefix = '') {
   return output;
 }
 
-const targetPath = process.argv[process.argv.length - 1] === process.argv[1] ? process.cwd() : path.resolve(process.argv[process.argv.length - 1]);
-
-console.log(
+// CLI entry point
+export function runCLI(argv = process.argv) {
+  const targetPath = argv[argv.length - 1] === argv[1] ? process.cwd() : path.resolve(argv[argv.length - 1]);
+  console.log(
     eztree(targetPath)
-);
+  );
+}
 
-
+// Only run CLI if executed directly
+if (process.argv[1] === (process.env._ || process.argv[1])) {
+  runCLI(process.argv);
+}
 
 //
 // Integration notes:
 // - Make sure to run `chmod +x index.js` if on Unix/Mac.
 // - Usage: `node index.js [optional-path]` or `npx ./index.js [optional-path]`
+// - For module usage: import { eztree, someFunction, runCLI } from './index.js'
 //
-

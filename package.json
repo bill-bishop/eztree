@@ -4,9 +4,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:module": "node -e \"import('./index.js').then(m => console.log(typeof m))\"",
+    "test:cli": "node ./bin/cli.js",
+    "test": "npm run test:module && npm run test:cli"
   },
-  "bin": { "pretty-tree": "./index.js" },
+  "bin": {
+    "pretty-tree": "./index.js",
+    "eztree": "./bin/cli.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
