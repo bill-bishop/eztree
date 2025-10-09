@@ -1,5 +1,5 @@
 {
-  "name": "eztree",
+  "name": "@hermesai/eztree",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
@@ -19,5 +19,5 @@
     "tree-node-cli": "^1.6.0"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "Simple library + CLI to print directory structures, ignoring common noisy directories"
 }
