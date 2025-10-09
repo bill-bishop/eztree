@@ -1,6 +1,6 @@
 {
   "name": "@hermesai/eztree",
-  "version": "1.0.1",
+  "version": "2.0.0-prerelease",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -9,15 +9,12 @@
     "test": "npm run test:module && npm run test:cli"
   },
   "bin": {
-    "pretty-tree": "./index.js",
     "eztree": "./bin/cli.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "tree-node-cli": "^1.6.0"
-  },
+  "dependencies": {},
   "devDependencies": {},
-  "description": "Simple library + CLI to print directory structures, ignoring common noisy directories"
+  "description": "Simple 0-dep library + CLI to print directory structures, ignoring common noisy directories"
 }
